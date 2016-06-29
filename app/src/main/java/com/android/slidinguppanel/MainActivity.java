@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         lv.setAdapter(arrayAdapter);
 
         mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        mLayout.setAnchorPoint(0.7f);
+        mLayout.setPanelState(SlidingUpPanelLayout.PanelState.ANCHORED);
         mLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View panel, float slideOffset) {
