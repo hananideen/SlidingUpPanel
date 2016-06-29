@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setSupportActionBar((Toolbar) findViewById(R.id.main_toolbar));
+        Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
 
         ListView lv = (ListView) findViewById(R.id.list);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
